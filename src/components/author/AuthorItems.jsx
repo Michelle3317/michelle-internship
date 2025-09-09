@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { nftData } from "../home/HotCollections"; // adjust path if required
+import { nftData } from "../home/HotCollections"; 
 
 const AuthorItems = ({ authorId }) => {
-  // if authorId provided, filter; otherwise show all (or change to suit your page)
+ 
   const items = authorId
     ? nftData.filter(
         (i) => i.ownerId === Number(authorId) || i.creatorId === Number(authorId)

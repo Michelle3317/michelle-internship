@@ -5,14 +5,14 @@ import AuthorItems from "../components/author/AuthorItems";
 import AuthorBanner from "../images/author_banner.jpg";
 
 const Author = () => {
-  const { id } = useParams(); // from /author/:id
+  const { id } = useParams(); 
   const authorId = Number(id);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // find author info from nftData (could be owner or creator)
+ 
   const nft = nftData.find(
     (item) => item.ownerId === authorId || item.creatorId === authorId
   );
@@ -25,19 +25,19 @@ const Author = () => {
     );
   }
 
-  // pick the right data (if authorId matches owner, show owner info, else show creator info)
+  
   const isOwner = nft.ownerId === authorId;
   const authorName = isOwner ? nft.ownerName : nft.creatorName;
   const authorImage = isOwner ? nft.ownerImage : nft.creatorImage;
   const username = `@${authorName.toLowerCase().replace(/\s+/g, "")}`;
-  const wallet = "UDHUHWudhwd78wdt7edb32uidbwyuidhg7wUHIFUHWewiqdj87dy7"; // you can replace with real
+  const wallet = "UDHUHWudhwd78wdt7edb32uidbwyuidhg7wUHIFUHWewiqdj87dy7"; 
 
   return (
     <div id="wrapper">
       <div className="no-bottom no-top" id="content">
         <div id="top"></div>
 
-        {/* Banner */}
+       
         <section
           id="profile_banner"
           aria-label="section"
@@ -81,7 +81,7 @@ const Author = () => {
                 </div>
               </div>
 
-              {/* Author NFTs */}
+             
               <div className="col-md-12">
                 <div className="de_tab tab_simple">
                   <AuthorItems authorId={authorId} />

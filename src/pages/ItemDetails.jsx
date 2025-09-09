@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { nftData } from "../components/home/HotCollections"; // adjust path if needed
-import EthImage from "../images/ethereum.svg"; // use your local svg (you had this before)
+import { nftData } from "../components/home/HotCollections"; 
+import EthImage from "../images/ethereum.svg"; 
 
 const ItemDetails = () => {
-  const { id } = useParams(); // id is nftId from the carousel link
+  const { id } = useParams(); 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,7 +20,7 @@ const ItemDetails = () => {
         <section aria-label="section" className="mt90 sm-mt-0">
           <div className="container">
             <div className="row">
-              {/* LEFT - NFT IMAGE */}
+              
               <div className="col-md-6 text-center">
                 <img
                   src={nft.nftImage}
@@ -29,7 +29,7 @@ const ItemDetails = () => {
                 />
               </div>
 
-              {/* RIGHT - DETAILS */}
+             
               <div className="col-md-6">
                 <div className="item_info">
                   <h2>
@@ -47,7 +47,7 @@ const ItemDetails = () => {
 
                   <p>{nft.description}</p>
 
-                  {/* OWNER */}
+                 
                   <div className="d-flex flex-row">
                     <div className="mr40">
                       <h6>Owner</h6>
@@ -65,7 +65,7 @@ const ItemDetails = () => {
                     </div>
                   </div>
 
-                  {/* CREATOR & PRICE */}
+             
                   <div className="de_tab tab_simple">
                     <div className="de_tab_content">
                       <h6>Creator</h6>
@@ -92,7 +92,7 @@ const ItemDetails = () => {
                   </div>
                 </div>
               </div>
-              {/* end right */}
+              
             </div>
           </div>
         </section>
